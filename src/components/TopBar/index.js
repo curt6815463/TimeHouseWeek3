@@ -10,14 +10,12 @@ class TopBar extends Component {
             Shoptime
           </div>
           <div className='navbar'>
-            <ul>
-              <li>HOME</li>
-              <li>ORDERS</li>
-              <li>PRODUCT</li>
-            </ul>
+            <a className='active'>HOME</a>
+            <a>ORDERS</a>
+            <a>PRODUCT</a>
           </div>
           <div className='admin'>
-            ADMIN
+            <span>ADMIN</span>
           </div>
         </Container>
 
