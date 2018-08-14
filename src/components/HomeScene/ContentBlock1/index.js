@@ -1,48 +1,35 @@
 import React, { Component } from 'react';
-import ContentBlock1 from './styled-components'
+import ContentBlock1Component from './styled-components'
 import Container from '@/common/style-components/Container'
-class HomeScene extends Component {
+class ContentBlock1 extends Component {
+  constructor(props){
+    super(props)
+  }
   render() {
     return (
-      <ContentBlock1>
-        <div className="col-4">
-          <div className="panel">
-            <div className="panel-title">
-              <i class="fas fa-dollar-sign"></i>
-              <span className="panel-wording">
-                TOTAL REVENUE
-              </span>
-            </div>
-            <div className="panel-number">
-              94,879,487
-            </div>
-          </div>
-        </div>
-        <div className="col-4">
-          <div className="panel">
-            <div className="panel-title">
-              <i class="fas fa-dollar-sign"></i>
-              <span className="panel-wording">
-                TOTAL REVENUE
-              </span>
-            </div>
-            <div className="panel-number"></div>
-          </div>
-        </div>
-        <div className="col-4">
-          <div className="panel">
-            <div className="panel-title">
-              <i class="fas fa-dollar-sign"></i>
-              <span className="panel-wording">
-                TOTAL REVENUE
-              </span>
-            </div>
-            <div className="panel-number"></div>
-          </div>
-        </div>
-      </ContentBlock1>
+      <ContentBlock1Component>
+        {
+          this.props.panelInfo.map((panel, index) => {
+            return (
+              <div className="col-4">
+                <div className="panel">
+                  <div className="panel-title">
+                    <i class={panel.icon}></i>
+                    <span className="panel-wording">
+                      {panel.wording}
+                    </span>
+                  </div>
+                  <div style={panel.style} className="panel-number">
+                    {panel.number}
+                  </div>
+                </div>
+              </div>
+            )
+          })
+        }
+      </ContentBlock1Component>
     );
   }
 }
 
-export default HomeScene;
+export default ContentBlock1;

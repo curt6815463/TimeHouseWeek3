@@ -5,12 +5,43 @@ import ContentBlock1 from './ContentBlock1'
 
 
 class HomeScene extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      contentBlock1PanelInfo:[
+        {
+          wording:'TOTAL REVENUE',
+          number: '123,334',
+          icon:'fas fa-dollar-sign',
+          style:{
+            color:'#82cf42'
+          }
+        },
+        {
+          wording:'TOTAL COST',
+          number: '123,334',
+          icon:'fab fa-dropbox',
+          style:{
+            color:'#cc122b'
+          }
+        },
+        {
+          wording:'Net INCOME',
+          number: '123,334',
+          icon:'fas fa-ticket-alt',
+          style:{
+            color:'#5094dc'
+          }
+        }
+      ]
+    }
+  }
   render() {
     return (
       <div>
         <Container>
           <ContentTitle />
-          <ContentBlock1 />
+          <ContentBlock1 panelInfo={this.state.contentBlock1PanelInfo}/>
         </Container>
       </div>
     );
