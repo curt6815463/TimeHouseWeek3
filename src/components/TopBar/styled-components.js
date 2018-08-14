@@ -7,6 +7,7 @@ const TopBarComponent = styled.div`
     font-size: 1.5rem;
     width:20%;
     box-sizing: border-box;
+    font-weight: 600;
   }
   .navbar{
     width: 60%;
