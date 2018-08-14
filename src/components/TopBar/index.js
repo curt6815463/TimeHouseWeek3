@@ -5,7 +5,7 @@ class TopBar extends Component {
   render() {
     return (
       <TopBarComponent>
-        <Container>
+        <Container className='layout'>      
           <div className='brand'>
             Shoptime
           </div>

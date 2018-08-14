@@ -3,6 +3,9 @@ import styled from 'styled-components';
 const TopBarComponent = styled.div`
   background-color: #000;
   color: #fff;
+  .layout{
+    display: flex;
+  }
   .brand{
     font-size: 1.5rem;
     width:20%;
