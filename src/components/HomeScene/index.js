@@ -1,52 +1,50 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import Container from '@/common/style-components/Container'
 import ContentTitle from './ContentTitle'
 import ContentBlock1 from './ContentBlock1'
 import ContentBlock2 from './ContentBlock2'
 
-
 class HomeScene extends Component {
-  constructor(props){
+  constructor(props) {
     super(props)
     this.state = {
-      contentBlock1PanelInfo:[
+      contentBlock1PanelInfo: [
         {
-          wording:'TOTAL REVENUE',
+          wording: 'TOTAL REVENUE',
           number: '123,334',
-          icon:'fas fa-dollar-sign',
-          style:{
-            color:'#82cf42'
+          icon: 'fas fa-dollar-sign',
+          style: {
+            color: '#82cf42'
           }
-        },
-        {
-          wording:'TOTAL COST',
+        }, {
+          wording: 'TOTAL COST',
           number: '123,334',
-          icon:'fab fa-dropbox',
-          style:{
-            color:'#cc122b'
+          icon: 'fab fa-dropbox',
+          style: {
+            color: '#cc122b'
           }
-        },
-        {
-          wording:'Net INCOME',
+        }, {
+          wording: 'Net INCOME',
           number: '123,334',
-          icon:'fas fa-ticket-alt',
-          style:{
-            color:'#5094dc'
+          icon: 'fas fa-ticket-alt',
+          style: {
+            color: '#5094dc'
           }
         }
-      ]
+      ],
+      ContentBlock2ChartInfo:{
+        
+      }
     }
   }
   render() {
-    return (
-      <div>
-        <Container>
-          <ContentTitle />
-          <ContentBlock1 panelInfo={this.state.contentBlock1PanelInfo}/>
-          <ContentBlock2 />
-        </Container>
-      </div>
-    );
+    return (<div>
+      <Container>
+        <ContentTitle/>
+        <ContentBlock1 panelInfo={this.state.contentBlock1PanelInfo}/>
+        <ContentBlock2/>
+      </Container>
+    </div>);
   }
 }
 
