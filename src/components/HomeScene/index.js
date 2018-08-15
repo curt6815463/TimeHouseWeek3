@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Container from '@/common/style-components/Container'
 import ContentTitle from './ContentTitle'
 import ContentBlock1 from './ContentBlock1'
+import ContentBlock2 from './ContentBlock2'
 
 
 class HomeScene extends Component {
@@ -42,6 +43,7 @@ class HomeScene extends Component {
         <Container>
           <ContentTitle />
           <ContentBlock1 panelInfo={this.state.contentBlock1PanelInfo}/>
+          <ContentBlock2 />
         </Container>
       </div>
     );
