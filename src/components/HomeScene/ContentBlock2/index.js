@@ -9,7 +9,7 @@ class ContentBlock2 extends Component {
       style:{
         position: 'relative',
         width:'100%',
-        height:'300px',
+        height:'360px',
       }
     }
   }
@@ -63,15 +63,37 @@ class ContentBlock2 extends Component {
         ]
       },
       options: {
+        scaleShowVerticalLines: true,
         maintainAspectRatio:false,
+        legend:{
+          display:true,
+          position:'bottom'
+        },
+        layout:{
+          padding:{
+            left:100,
+            right:100,
+            top:30,
+            bottom:30
+          }
+        },
+        title:{
+          display:true,
+          text:'Active'
+        },
         scales: {
-          yAxes: [
+          // yAxes: [
+          //   {
+          //     ticks: {
+          //       stepSize: 10,
+          //       max:50,
+          //     }
+          //   }
+          // ],
+          xAxes:[
             {
-              ticks: {
-                stepSize: 5,
-                beginAtZero: true,
-                // min:10,
-                max:50
+              gridLines:{
+                display:false
               }
             }
           ]
