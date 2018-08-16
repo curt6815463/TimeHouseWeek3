@@ -3,6 +3,7 @@ import Container from '@/common/style-components/Container'
 import ContentTitle from './ContentTitle'
 import ContentBlock1 from './ContentBlock1'
 import ContentBlock2 from './ContentBlock2'
+import ContentBlock3 from './ContentBlock3'
 
 class HomeScene extends Component {
   constructor(props) {
@@ -33,7 +34,7 @@ class HomeScene extends Component {
         }
       ],
       ContentBlock2ChartInfo:{
-        
+
       }
     }
   }
@@ -43,6 +44,7 @@ class HomeScene extends Component {
         <ContentTitle/>
         <ContentBlock1 panelInfo={this.state.contentBlock1PanelInfo}/>
         <ContentBlock2/>
+        <ContentBlock3/>
       </Container>
     </div>);
   }
